@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(170, 167, 167);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #978e8e;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #2e416c;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f5f5f5;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button.delete {
+  background: #d9534f;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Initial task list item styles */
+li {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Task item fade-in animation */
+li.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Task item fade-out animation */
+li.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Completed task styles */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+input[type="checkbox"].complete-checkbox {
+  margin-right: 10px;
+}
